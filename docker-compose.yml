@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  letsencrypt:
+    build:
+      context: .
+    volumes:
+      - ./letsencrypt:/etc/letsencrypt
+      - ./lib:/var/lib/letsencrypt
+      - ./logs:/var/log/letsencrypt
+      - ./webroot:/var/www/webroot
